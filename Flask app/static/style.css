@@ -1,10 +1,28 @@
+/* style.css */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure body takes up the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    margin: 20px 0; /* Add space above and below the heading */
+}
+
+.container {
+    width: 450px;
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Add margin at the bottom */
 }
 
 .form-group {
@@ -13,17 +31,36 @@ h1 {
 
 label {
     display: block;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
 select, input[type="text"] {
     width: 100%;
     padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     box-sizing: border-box;
 }
 
+select:focus, input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
 button {
-    padding: 10px 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
